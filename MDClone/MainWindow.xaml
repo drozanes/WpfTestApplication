@@ -1,0 +1,33 @@
+﻿<Window x:Class="MDClone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MDClone"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="MDCLone App"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Add table"/>
+            <Button Grid.Column="1" Content="Send mail form"/>
+        </Grid>
+        <TabControl Grid.Row="2">
+            <TabItem Header="Test" Content="sdgdsgds"/>
+            <TabItem Header="T53est">
+                <local:SendMailForm/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
