@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MDClone
+namespace WpfTestApplication
 {
     /// <summary>
     /// Interaction logic for SendMailForm.xaml
@@ -22,6 +22,7 @@ namespace MDClone
     {
         public SendMailForm()
         {
+            this.DataContext = new SendMailViewModel();
             InitializeComponent();
         }
     }

@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace WpfTestApplication
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TableForm.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TableForm : UserControl
     {
-        public MainWindow()
+        public TableForm()
         {
-            this.DataContext = new MainWindowViewModel();
+            this.DataContext = new TableFormViewModel();
             InitializeComponent();
         }
     }

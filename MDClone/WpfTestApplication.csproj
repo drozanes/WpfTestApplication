@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F56083CD-0F5E-49C3-92EA-F2DD32D2CE12}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MDClone</RootNamespace>
-    <AssemblyName>MDClone</AssemblyName>
+    <RootNamespace>WpfTestApplication</RootNamespace>
+    <AssemblyName>WpfTestApplication</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CommandHandler.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="TabHeaderTemplateSelector.cs" />
+    <Compile Include="TableFormViewModel.cs" />
     <Compile Include="SendMailForm.xaml.cs">
       <DependentUpon>SendMailForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="SendMailViewModel.cs" />
+    <Compile Include="TableForm.xaml.cs">
+      <DependentUpon>TableForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabContentTemplateSelector.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +80,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SendMailForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,6 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
