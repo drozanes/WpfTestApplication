@@ -55,19 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CommandHandler.cs" />
-    <Compile Include="MainWindowViewModel.cs" />
-    <Compile Include="TabHeaderTemplateSelector.cs" />
-    <Compile Include="TableFormViewModel.cs" />
-    <Compile Include="SendMailForm.xaml.cs">
+    <Compile Include="ViewModels\CommandHandler.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Selectors\TabHeaderTemplateSelector.cs" />
+    <Compile Include="ViewModels\TableFormViewModel.cs" />
+    <Compile Include="UserControls\SendMailForm.xaml.cs">
       <DependentUpon>SendMailForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SendMailViewModel.cs" />
-    <Compile Include="TableForm.xaml.cs">
+    <Compile Include="ViewModels\SendMailViewModel.cs" />
+    <Compile Include="UserControls\TableForm.xaml.cs">
       <DependentUpon>TableForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TabContentTemplateSelector.cs" />
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Selectors\TabContentTemplateSelector.cs" />
+    <Page Include="UserControls\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,15 +75,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="UserControls\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SendMailForm.xaml">
+    <Page Include="UserControls\SendMailForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TableForm.xaml">
+    <Page Include="UserControls\TableForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,12 +110,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="testCsvFile.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
